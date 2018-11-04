@@ -1,0 +1,14 @@
+
+*.sqlite3
+*.pyc
+**/migrations/
+**/.sass-cache/
+*.map
+.idea/
+.vscode/
+information/
+all_staticfiles/
+*.zip
+node_modules/
+static/uploaded/
+virtualenv/
