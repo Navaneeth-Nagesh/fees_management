@@ -61,5 +61,5 @@ class Fees(models.Model):
         from student.models import Student
         return Student.objects.filter(branch=id)
 
-    def total_amount():
+    def total_amount(self):
         return str(self.payment * self.tax / (100 + self.tax))

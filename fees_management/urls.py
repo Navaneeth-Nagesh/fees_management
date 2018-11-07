@@ -4,7 +4,7 @@ from django.urls import path, include, re_path
 from fees_management import views
 from rest_framework.routers import DefaultRouter
 
-from student.views import StudentViewSet, FeesViewSet, CourseViewSet, BranchViewSet
+from student.views import *
 
 router = DefaultRouter()
 router.register(r'student', StudentViewSet)

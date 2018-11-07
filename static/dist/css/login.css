@@ -3,7 +3,9 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #f3f3f3;
+  background-image: url("../../dist/images/background-image-login.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 #login-content .error-message {
   color: #ff3d3d;
@@ -58,7 +60,7 @@
   width: 35%;
   padding: 30px 0;
   border-radius: 20px;
-  background-color: #333;
+  background-color: #0709088c;
   border: none;
   margin: 0 auto;
 }
