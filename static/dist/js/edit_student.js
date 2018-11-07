@@ -50,10 +50,6 @@ async function edit_content_student(e) {
     }, 500);
 }
 
-function dom() {
-    alert();
-}
-
 fees_row.forEach(function (row) {
     row.addEventListener('click', edit_content_fees);
 });

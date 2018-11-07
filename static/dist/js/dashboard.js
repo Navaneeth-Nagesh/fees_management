@@ -73,6 +73,10 @@ async function send_student_data() {
             showConfirmButton: false,
             timer: 1500
         });
+
+        setTimeout(function () {
+            document.location.reload(true);
+        }, 1000);
     }
 }
 
@@ -114,6 +118,10 @@ async function send_fees_data() {
             showConfirmButton: false,
             timer: 1500
         });
+
+        setTimeout(function () {
+            document.location.reload(true);
+        }, 1000);
     }
 }
 
@@ -146,6 +154,9 @@ async function send_course_data() {
             showConfirmButton: false,
             timer: 1500
         });
+        setTimeout(function () {
+            document.location.reload(true);
+        }, 1000);
     }
 }
 
@@ -180,6 +191,7 @@ async function send_branch_data() {
             showConfirmButton: false,
             timer: 1500
         });
+        document.location.reload(true);
     }
 }
 
@@ -194,12 +206,15 @@ submit_course.addEventListener('click', send_course_data);
 submit_branch.addEventListener('click', send_branch_data);
 
 var close_overlay = document.querySelector('.close-action');
-var action_button = document.getElementById('action-button');
 
-close_overlay.addEventListener('click', hide_overlay);
-var overlay_dark = document.querySelector('.dark-overlay');
+if (document.getElementById('action-button')) {
+    var action_button = document.getElementById('action-button');
 
-action_button.addEventListener('click', show_overlay);
+    close_overlay.addEventListener('click', hide_overlay);
+    var overlay_dark = document.querySelector('.dark-overlay');
+
+    action_button.addEventListener('click', show_overlay);
+}
 
 function show_overlay() {
     overlay_dark.classList.add('show');

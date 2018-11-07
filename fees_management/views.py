@@ -40,6 +40,7 @@ class Dashboard(View):
         context['course'] = Course.objects.all()
         context['branch'] = Branch.objects.all()
         context['fees'] = Fees.objects.all()
+        context['example'] = 'hello world'
 
         if the_id:
             context['heading'] = Student.objects.filter(branch=the_id)[0]
