@@ -50,6 +50,7 @@ class Fees(models.Model):
     payment = models.PositiveIntegerField()
     student = models.ForeignKey(Student, on_delete=models.CASCADE)
     timestamp = models.DateTimeField(auto_now_add=True)
+    bank = models.CharField(max_length=30)
 
     def __str__(self):
         return str(self.student) + ' paid rupees ' + str(self.payment)

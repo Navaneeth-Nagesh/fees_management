@@ -75,6 +75,7 @@
                 <th>Tax</th>
                 <th>Payment</th>
                 <th>Timestamp</th>
+                <th>Bank</th>
             </tr>
             {% for fee in fees %}
             <tr class="row" data-id="{{ fee.pk }}">
@@ -83,6 +84,7 @@
                 <td>{{ fee.tax }}</td>
                 <td>{{ fee.payment }}</td>
                 <td>{{ fee.timestamp }}</td>
+                <td>{{ fee.bank }}</td>
             </tr>
             {% endfor %}
         </table>
