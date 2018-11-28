@@ -82,8 +82,9 @@ async function send_fees_data() {
     let fees_name = document.querySelector('input[name=fees-name]');
     let fees_tax = document.querySelector('input[name=fees-tax]');
     let fees_payment = document.querySelector('input[name=fees-payment]');
+    let bank = document.querySelector('input[name=bank]');
 
-    if (fees_name == '' || fees_student == '' || fees_tax == '' || fees_payment == '') {
+    if (fees_name == '' || fees_student == '' || fees_tax == '' || fees_payment == '' || bank == '') {
         swal({
             title: 'Error!',
             text: 'Please, Fill The Fields!',
@@ -103,7 +104,8 @@ async function send_fees_data() {
                 student: fees_student,
                 name: fees_name.value,
                 tax: fees_tax.value,
-                payment: fees_payment.value
+                payment: fees_payment.value,
+                bank: bank.value
             })
         });
 

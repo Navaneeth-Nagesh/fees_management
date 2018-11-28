@@ -65,6 +65,7 @@ async function edit_content_fees(e) {
                 document.querySelector('[name=fees-name]').value = data.name;
                 document.querySelector('[name=fees-tax]').value = data.tax;
                 document.querySelector('[name=fees-payment]').value = data.payment;
+                document.querySelector('[name=bank]').value = data.bank;
             }
         })
     });
@@ -135,6 +136,7 @@ function edited_fees_data(e) {
     let fees_name = document.querySelector('input[name=fees-name]');
     let fees_tax = document.querySelector('input[name=fees-tax]');
     let fees_payment = document.querySelector('input[name=fees-payment]');
+    let bank = document.querySelector('input[name=bank');
 
     fetch('/api/fees/' + id + '/', {
         method: 'PUT',
@@ -142,7 +144,8 @@ function edited_fees_data(e) {
             student: fees_student,
             name: fees_name.value,
             tax: fees_tax.value,
-            payment: fees_payment.value
+            payment: fees_payment.value,
+            bank: bank.value
         }),
         headers:{
             'Accept': 'application/json',

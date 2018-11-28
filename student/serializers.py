@@ -14,7 +14,7 @@ class FeesSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Fees
-        fields = ('id', 'name', 'student', 'tax', 'payment')
+        fields = ('id', 'name', 'student', 'tax', 'payment', 'bank')
 
 class BranchSerializer(serializers.ModelSerializer):
 

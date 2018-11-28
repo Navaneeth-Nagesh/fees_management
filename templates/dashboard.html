@@ -83,7 +83,7 @@
                 <td>{{ fee.name }}</td>
                 <td>{{ fee.tax }}</td>
                 <td>{{ fee.payment }}</td>
-                <td>{{ fee.timestamp }}</td>
+                <td>{{ fee.timestamp }}</td>   
                 <td>{{ fee.bank }}</td>
             </tr>
             {% endfor %}
@@ -180,6 +180,10 @@
                 <label>
                     <span>Payment</span>
                     <input type="number" name="fees-payment">
+                </label>
+                <label>
+                    <span>Bank</span>
+                    <input type="text" name="bank">
                 </label>
             </section>
         </fieldset>

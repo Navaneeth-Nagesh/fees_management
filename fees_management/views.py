@@ -4,7 +4,7 @@ from django.shortcuts import render, get_object_or_404
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate, logout
 from django.contrib.auth import login as auth_login
-from student.models import Student, Fees, Course, Branch
+from student.models import *
 from student.models import Fees
 from django.views import View
 from django.http import HttpResponseRedirect, HttpResponse
@@ -40,7 +40,6 @@ class Dashboard(View):
         context['course'] = Course.objects.all()
         context['branch'] = Branch.objects.all()
         context['fees'] = Fees.objects.all()
-        context['example'] = 'hello world'
 
         if the_id:
             context['heading'] = Student.objects.filter(branch=the_id)[0]
